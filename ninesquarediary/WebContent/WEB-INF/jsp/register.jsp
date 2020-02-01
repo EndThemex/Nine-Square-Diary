@@ -24,17 +24,17 @@
           <div class="form-group">
             <label for="userName" class="col-sm-3 control-label">用户名</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名(需包含字母和数字)"/>
+              <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名(字母和数字)"/>
             </div>
-            <div class="col-sm-4 text-left tip" id="userNameTip">用户名不空</div>
+            <div class="col-sm-4 text-left tip" id="userNameTip">请输入用户名</div>
           </div>
           
           <div class="form-group">
             <label for="nickName" class="col-sm-3 control-label">昵称</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="nickName" placeholder="昵称">
+              <input type="text" class="form-control" id="nickName" placeholder="昵称(不支持特殊符号)">
             </div>
-            <div class="col-sm-4 text-left tip" id="nickNameTip">昵称不能为空</div>
+            <div class="col-sm-4 text-left tip" id="nickNameTip">请输入昵称</div>
           </div>
           
           <div class="form-group">
@@ -53,7 +53,7 @@
           <div class="form-group">
             <label for="password" class="col-sm-3 control-label">密码</label>
             <div class="col-sm-5">
-              <input type="password" class="form-control" id="password" placeholder="密码">
+              <input type="password" class="form-control" id="password" placeholder="登录密码(最短6位)">
             </div>
             <div class="col-sm-4 text-left tip" id="passwordTip">请输入密码</div>
           </div>

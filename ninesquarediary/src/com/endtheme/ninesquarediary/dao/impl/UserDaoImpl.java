@@ -30,7 +30,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     public User queryOne(String userName) {
-        String sql = "SELECT id, user_name, password FROM user_tb WHERE user_name = ?";
+        String sql = "SELECT id, user_name, password, gender, address, birthday FROM user_tb WHERE user_name = ?";
         List<User> userList = new ArrayList<User>();
         User user = null;
         RowMapper<User> rowMapper = new RowMapper<User>() {
@@ -41,6 +41,8 @@ public class UserDaoImpl implements UserDao {
                 user.setId(rs.getInt("id"));
                 user.setUserName(rs.getString("user_name"));
                 user.setPassword(rs.getString("password"));
+                user.setGender(rs.getString("gender"));
+                user.setAddress(rs.getString("address"));
                 return user;
             }
         };

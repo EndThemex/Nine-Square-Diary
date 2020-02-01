@@ -2,6 +2,10 @@ body {
   margin: 0px 0px;
   padding: 0px 0px;
 }
+@font-face {
+	font-family:fz;
+	src: url('../fonts/fonts-qinfeng.ttf');
+}
 .container {
   background-color: #ffffff;
   border-radius: 5px;

@@ -15,6 +15,15 @@ $(document).ready(function() {
 });
 
 $("#loginButton").click(function() {
+	loginFun();
+});
+
+function keyLogin() {
+	if (event.keyCode == 13) // 回车键的键值为13
+		loginFun(); // 调用登录按钮的登录事件
+}
+
+function loginFun() {
     var userName = $("#userName").val();
     var password = $("#password").val();
     var flag = true;
@@ -38,7 +47,7 @@ $("#loginButton").click(function() {
         $(".login-messages").removeClass("visible");
         $("#loginForm").submit();
     }
-});
+}
 
 function rememberPassword(userNameValue, passwordValue) {
     var checkObj = document.getElementById("loginCheckBox");

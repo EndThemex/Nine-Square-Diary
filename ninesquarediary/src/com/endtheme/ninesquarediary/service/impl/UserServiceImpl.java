@@ -7,6 +7,7 @@ import com.endtheme.ninesquarediary.exception.ParameterException;
 import com.endtheme.ninesquarediary.exception.ServiceException;
 import com.endtheme.ninesquarediary.model.User;
 import com.endtheme.ninesquarediary.service.UserService;
+import com.endtheme.ninesquarediary.util.MD5Util;
 import com.endtheme.ninesquarediary.util.StringUtil;
 
 public class UserServiceImpl implements UserService {
@@ -34,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
         user =userDao.login(userName, password);
 
-        if (user == null || !password.equals(user.getPassword())) {
+        if (user == null || !MD5Util.MD5(password).equals(user.getPassword())) {
             throw new ServiceException(1001, "用户名或密码错误");
         }
         user.setPassword("");

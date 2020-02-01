@@ -14,7 +14,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="<%=request.getContextPath() %>/static/css/login.css" rel="stylesheet">
 </head>
-<body>
+<body onkeydown="keyLogin();">
     <%@ include file="common/header.jsp"%>
 
     <%
@@ -25,7 +25,7 @@
     }
     SessionUtil.addSession("TIP_MESSAGE", "");
     %>
-    <div class="container">
+    <div class="container" id="login">
       <div class="page-title">
         <h3>用户登陆:</h3>
       </div>

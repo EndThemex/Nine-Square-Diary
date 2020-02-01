@@ -16,7 +16,7 @@ User user = (User) SessionUtil.getSession("user");
 %>
 
 <div class="jumbotron header-div pl-2">
-    <h1>九宫格日记网站</h1>
+    <h2 style="font-family:'fz'">九宫格日记网站</h2>
     <div class="daily-words-div">
         <div>每日一句</div>
         <div class="daily-date"></div>
@@ -34,23 +34,23 @@ User user = (User) SessionUtil.getSession("user");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" title="九宫格日记" href="#">九宫格日记</a>
+      <a class="navbar-brand" style="font-family:'fz'" title="九宫格日记" href="#">九宫格日记</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="welcome">首 页 <span class="sr-only">(current)</span></a></li>
+        <li><a href="welcome">首 页 </a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <%
+        // 未登录菜单
         if (user == null) {
         %>
         <li><a href="login">登 陆</a></li>
         <li><a href="register">注 册</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更 多 <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -61,13 +61,14 @@ User user = (User) SessionUtil.getSession("user");
         </li>
         <%
         } else {
+        	// 登录后
         %>
         <li><a href="#">欢迎你：<%=user.getUserName() %></a></li>
         <li><a href="#">写日记</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">个人中心</a></li>
+            <li><a href="myspace">个人中心</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -84,7 +85,7 @@ User user = (User) SessionUtil.getSession("user");
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#">Library</a></li>
-  <li class="active">Data</li>
+  <li class="active">2</li>
 </ol>
 
 </html>

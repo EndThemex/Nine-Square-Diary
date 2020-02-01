@@ -25,7 +25,7 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 返回默认的欢迎页面
+     * 	返回默认的欢迎页面
      * @return
      */
     @RequestMapping("/welcome")
@@ -38,7 +38,7 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 返回登陆页面
+     * 	返回登陆页面
      * @return
      */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -51,7 +51,7 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 登陆方法 成功登陆跳转到主页面
+     * 	登陆方法 成功登陆跳转到主页面
      * @param userName
      * @param password
      * @return
@@ -82,7 +82,7 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 返回登陆页面
+     * 	返回登陆页面
      * @return
      */
     @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -90,6 +90,15 @@ public class UserController extends BaseController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("register");
+
+        return modelAndView;
+    }
+    
+    @RequestMapping(value = "/myspace")
+    public ModelAndView mySpace() {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("user/myspace");
 
         return modelAndView;
     }
