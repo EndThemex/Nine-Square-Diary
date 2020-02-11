@@ -64,6 +64,18 @@
         <property name="userService" ref="userService"></property>
     </bean>
     
+    <bean id="diaryDao" class="com.endtheme.ninesquarediary.dao.impl.DiaryDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+    </bean>
+    
+    <bean id="diaryService" class="com.endtheme.ninesquarediary.service.impl.DiaryServiceImpl">
+        <property name="diaryDao" ref="diaryDao"></property>
+    </bean>
+
+    <bean id="diaryController" class="com.endtheme.ninesquarediary.controller.DiaryController">
+        <property name="diaryService" ref="diaryService"></property>
+    </bean>
+    
     <bean class="com.endtheme.ninesquarediary.util.SpringUtil"></bean>
 
 </beans>

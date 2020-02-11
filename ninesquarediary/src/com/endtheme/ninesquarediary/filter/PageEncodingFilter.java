@@ -30,5 +30,10 @@ public class PageEncodingFilter implements Filter {
             enconding = filterConfig.getInitParameter("enconding");
         }
     }
+    
+    @Override
+    public void destroy() {
+    	Filter.super.destroy();
+    }
 
 }

@@ -3,24 +3,41 @@ body {
   padding: 0px 0px;
 }
 @font-face {
-	font-family:fz;
-	src: url('../fonts/fonts-qinfeng.ttf');
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_vok83lzy58t.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_vok83lzy58t.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_vok83lzy58t.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_vok83lzy58t.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_vok83lzy58t.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_vok83lzy58t.svg#站酷小薇体') format('svg'); /* iOS 4.1- */
+}
+.webfont {
+	font-family:'webfont';
 }
 .container {
   background-color: #ffffff;
   border-radius: 5px;
   padding: 20px;
+  box-shadow: 0 0 7px 1px #c5c5c5;
 }
 .header-div {
-  background-color: #ffffff;
-  background-image: url("../images/header.png");
+  background-color: #AADDFF;
+  color: #FFAD33;
+  background-image: url("https://i.loli.net/2020/02/09/VRHTYJrBI37tzKo.png");
   margin-bottom: 0px;
-  padding-left: 20px;
+  padding: 20px;
   background-size: cover;
 }
 .breadcrumb {
   opacity: 0.8;
 }
 .daily-words-div {
-  height: 80px;
+  background-color: #ffffff;
+  opacity: 0.8;
+  padding: 5px;
+  border-radius: 2px;
+}
+.pagination {
+	visibility: hidden;
 }

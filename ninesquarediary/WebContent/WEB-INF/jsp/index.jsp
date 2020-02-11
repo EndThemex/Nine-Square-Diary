@@ -14,65 +14,12 @@
 <body>
 	<%@ include file="common/header.jsp"%>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath() %>/static/images/demo.png" alt="...">
-					<div class="caption">
-						<h3>日记标题</h3>
-						<p>用户</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">点赞</a> 
-							<a href="#" class="btn btn-default" role="button">评论</a>
-						</p>
-					</div>
-				</div>
-			</div>
+		<div class="row diary-list">
 
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath() %>/static/images/demo.png" alt="...">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>...</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">Button</a> <a
-								href="#" class="btn btn-default" role="button">Button</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath() %>/static/images/demo.png" alt="...">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>...</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">Button</a> <a
-								href="#" class="btn btn-default" role="button">Button</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath() %>/static/images/demo.png" alt="...">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>...</p>
-						<p>
-							<a href="#" class="btn btn-primary" role="button">Button</a> <a
-								href="#" class="btn btn-default" role="button">Button</a>
-						</p>
-					</div>
-				</div>
-			</div>
 		</div>
 	<%@ include file="common/pagination.jsp"%>
 	</div>
 	<%@ include file="common/footer.jsp"%>
+	<script src="<%=request.getContextPath() %>/static/js/index.js"></script>
 </body>
 </html>

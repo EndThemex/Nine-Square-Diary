@@ -13,6 +13,7 @@ $(document).ready(function() {
         document.getElementById("password").value = storage.getItem("password");
     }
 });
+function loadDiary() {}
 
 $("#loginButton").click(function() {
 	loginFun();

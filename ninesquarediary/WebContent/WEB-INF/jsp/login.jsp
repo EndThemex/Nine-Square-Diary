@@ -35,7 +35,7 @@
                     <div class="login-messages <%=hidden %> text-center"><%=tipMessage %></div>
                 </div>
                 <div class="form-group col-sm-offset-2 col-sm-8">
-                    <label for="userName">用户名/手机号码</label>
+                    <label for="userName">用户名</label>
                     <input type="text" class="form-control col-sm-6" id="userName" name="userName" placeholder="用户名/手机号码" maxlength="55"/>
                 </div>
                 <div class="form-group col-sm-offset-2 col-sm-8">

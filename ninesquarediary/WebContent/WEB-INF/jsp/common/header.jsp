@@ -16,12 +16,11 @@ User user = (User) SessionUtil.getSession("user");
 %>
 
 <div class="jumbotron header-div pl-2">
-    <h2 style="font-family:'fz'">九宫格日记网站</h2>
-    <div class="daily-words-div">
-        <div>每日一句</div>
-        <div class="daily-date"></div>
-        <div class="daily-words"></div>
-        <div class="daily-words-en"></div>
+    <h2 class="webfont">九宫格日记网站</h2>
+    <div class="row daily-words-div">
+        <div class="col-xs-12">每日一句 今日：<span class="daily-date"></span></div>
+        <div class="col-xs-12 daily-words"></div>
+        <div class="col-xs-12 daily-words-en"></div>
     </div>
 </div>
 <nav class="navbar navbar-default">
@@ -34,21 +33,21 @@ User user = (User) SessionUtil.getSession("user");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="font-family:'fz'" title="九宫格日记" href="#">九宫格日记</a>
+      <a class="navbar-brand webfont" title="九宫格日记" href="#">九宫格日记</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="welcome">首 页 </a></li>
+        <li><a href="../user/welcome">首 页 </a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <%
-        // 未登录菜单
+        // 未-登-录-菜-单
         if (user == null) {
         %>
-        <li><a href="login">登 陆</a></li>
-        <li><a href="register">注 册</a></li>
+        <li><a href="../user/login">登 陆</a></li>
+        <li><a href="../user/register">注 册</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更 多 <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -56,23 +55,23 @@ User user = (User) SessionUtil.getSession("user");
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="http://www.endtheme.cn">关于</a></li>
           </ul>
         </li>
         <%
         } else {
-        	// 登录后
+        	//  登-录-后
         %>
         <li><a href="#">欢迎你：<%=user.getUserName() %></a></li>
-        <li><a href="#">写日记</a></li>
+        <li><a href="../diary/write">写日记</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="myspace">个人中心</a></li>
+            <li><a href="../user/myspace">个人中心</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="logout">退出登陆</a></li>
+            <li><a href="../user/logout">退出登陆</a></li>
           </ul>
         </li>
         <%    
@@ -82,10 +81,9 @@ User user = (User) SessionUtil.getSession("user");
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<!-- 面包屑导航 -->
 <ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li class="active">2</li>
+  <li class="breadcrumb-home"><a href="../user/welcome">首页</a></li>
 </ol>
 
 </html>

@@ -10,6 +10,7 @@
 <title>九宫格日记--个人中心</title>
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=request.getContextPath() %>/static/css/myspace.css"  rel="stylesheet">
 </head>
 <body>
 <%@ include file="../common/header.jsp"%>
@@ -24,7 +25,7 @@
 				<p>用户名：<%=user.getUserName() %></p>
 			</div>
 			<!-- 个人动态 -->
-			<div class="col-sm-9 col-md-9">
+			<div class="col-sm-9 col-md-9 my-space-right">
 				<h3>个人动态</h3>
 				<div class="col-sm-6 col-md-4">
 					<div class="thumbnail">

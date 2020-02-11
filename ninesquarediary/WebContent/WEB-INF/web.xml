@@ -53,7 +53,7 @@
         <filter-class>com.endtheme.ninesquarediary.filter.SessionFilter</filter-class>
         <init-param>
             <param-name>noNeedLoginPages</param-name>
-            <param-value>,page/user/welcome,page/user/register,page/user/login,page/user/forgetpassword</param-value>
+            <param-value>,page/user/welcome,page/user/register,page/user/login,page/user/forgetpassword,page/diary/queryalldiary</param-value>
         </init-param>
     </filter>
     

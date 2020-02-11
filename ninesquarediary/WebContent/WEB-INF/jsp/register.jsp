@@ -51,6 +51,14 @@
           </div>
           
           <div class="form-group">
+            <label for="birthday" class="col-sm-3 control-label">生日</label>
+            <div class="col-sm-5">
+              <input type="date" class="form-control" id="birthday" max="2020-02-12" placeholder="生日">
+            </div>
+            <div class="col-sm-4 text-left tip" id="birthdayTip">请输入生日</div>
+          </div>
+          
+          <div class="form-group">
             <label for="password" class="col-sm-3 control-label">密码</label>
             <div class="col-sm-5">
               <input type="password" class="form-control" id="password" placeholder="登录密码(最短6位)">
